@@ -11,3 +11,8 @@ df.columns = ['mpg','cylinders','displacement','horsepower','weight',
 
 # 열을 선택하여 박스 플롯 그리기
 df[['mpg','cylinders']].plot(kind='box')
+#df['mpg'].plot(kind='box')
+#print(df.mpg.describe())
+#print(df.cylinders.describe())
+print(df[['mpg','cylinders']].describe())
+

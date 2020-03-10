@@ -21,21 +21,26 @@ print(df[['mpg','weight']].mean())
 print(df.median())
 print('\n')
 print(df['mpg'].median())
+print(df.mpg.median())
 
 # 최대값 
 print(df.max())
 print('\n')
 print(df['mpg'].max())
+print(df.mpg.max())
 
 # 최소값 
 print(df.min())
 print('\n')
 print(df['mpg'].min())
+print(df.mpg.min())
 
 # 표준편차 
 print(df.std())
 print('\n')
 print(df['mpg'].std())
+print(df.mpg.std())
+print(df[['mpg','weight']].std())
 
 # 상관계수 
 print(df.corr())
