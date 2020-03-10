@@ -17,10 +17,14 @@ for row in rows:
     
     try:
         etf_name = re.findall('^(.*) \(NYSE', row.text)
+        #print(etf_name)
         etf_market = re.findall('\((.*)\|', row.text)
+        #print(etf_market)
         etf_ticker = re.findall('NYSE Arca\|(.*)\)', row.text)
+        #print(etf_ticker)
         
-        if (len(etf_ticker) > 0) & (len(etf_market) > 0):
+        if (len(etf_ticker) > 0) & (len(etf_market) > 0) & (len(etf_name) > 0):
+            #print(len(etf_ticker), len(etf_market), len(etf_name))
             etfs[etf_ticker[0]] = [etf_market[0], etf_name[0]]
 
     except AttributeError as err:
@@ -33,3 +37,5 @@ print('\n')
 # etfs 딕셔너리를 데이터프레임으로 변환
 df = pd.DataFrame(etfs)
 print(df)
+print(type(df))
+print(df.T)

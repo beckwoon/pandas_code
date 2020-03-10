@@ -2,6 +2,8 @@
 
 ## google 지오코딩 API 통해 위도, 경도 데이터 가져오기 
 
+# Anaconda Powershell Prompt에서 'pip install googlemaps' 실행
+
 # 라이브러리 가져오기
 import googlemaps
 import pandas as pd

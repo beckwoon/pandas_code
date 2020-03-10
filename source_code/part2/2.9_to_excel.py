@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+# pip install openpyxl
+
 import pandas as pd
 
 # 판다스 DataFrame() 함수로 데이터프레임 변환. 변수 df에 저장 

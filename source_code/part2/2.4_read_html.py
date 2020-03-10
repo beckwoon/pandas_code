@@ -6,7 +6,10 @@ import pandas as pd
 url ='./sample.html'
 
 # HTML 웹페이지의 표(table)를 가져와서 데이터프레임으로 변환 
+# pip install lxml
 tables = pd.read_html(url)
+
+print(tables)
 
 # 표(table)의 개수 확인
 print(len(tables))

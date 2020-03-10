@@ -25,6 +25,6 @@ print(df2)
 
 # df1을 'sheet1'으로, df2를 'sheet2'로 저장 (엑셀파일명은 "df_excelwriter.xlsx")
 writer = pd.ExcelWriter("./df_excelwriter.xlsx")
-df1.to_excel(writer, sheet_name="sheet1")
-df2.to_excel(writer, sheet_name="sheet2")
+df1.to_excel(writer, sheet_name="data1")
+df2.to_excel(writer, sheet_name="data2")
 writer.save()
