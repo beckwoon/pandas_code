@@ -20,10 +20,10 @@ ax4 = fig.add_subplot(2, 2, 4)
 # 박스 그래프 - 기본값
 sns.boxplot(x='alive', y='age', data=titanic, ax=ax1) 
 
-# 바이올린 그래프 - hue 변수 추가
+# 박스 그래프 - hue 변수 추가
 sns.boxplot(x='alive', y='age', hue='sex', data=titanic, ax=ax2) 
 
-# 박스 그래프 - 기본값
+# 바이올린 그래프 - 기본값
 sns.violinplot(x='alive', y='age', data=titanic, ax=ax3) 
 
 # 바이올린 그래프 - hue 변수 추가

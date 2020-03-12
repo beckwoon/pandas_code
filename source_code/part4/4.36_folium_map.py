@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+# pip install folium
 # 라이브러리 불러오기
 import folium
 

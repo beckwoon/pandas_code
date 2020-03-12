@@ -27,6 +27,7 @@ df_seoul.set_index('전입지', inplace=True)
 sr_one = df_seoul.loc['경기도']
 
 # 스타일 서식 지정
+# https://matplotlib.org/gallery#style_sheets
 plt.style.use('ggplot') 
 
 # 그림 사이즈 지정

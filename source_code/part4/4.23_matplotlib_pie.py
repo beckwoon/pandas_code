@@ -24,7 +24,7 @@ df_origin.index = ['USA', 'EU', 'JAPAN']
 # 제조국가(origin) 열에 대한 파이 차트 그리기 – count 열 데이터 사용
 df_origin['count'].plot(kind='pie', 
                      figsize=(7, 5),
-                     autopct='%1.1f%%',   # 퍼센트 % 표시
+                     autopct='%1.1f%%',   # 퍼센트 % 표시 (소숫점 첫째자리까지 표기)
                      startangle=10,       # 파이 조각을 나누는 시작점(각도 표시)
                      colors=['chocolate', 'bisque', 'cadetblue']    # 색상 리스트
                      )

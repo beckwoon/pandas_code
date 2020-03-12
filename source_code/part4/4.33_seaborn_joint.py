@@ -10,7 +10,7 @@ titanic = sns.load_dataset('titanic')
 # 스타일 테마 설정 (5가지: darkgrid, whitegrid, dark, white, ticks)
 sns.set_style('whitegrid')
 
-# 조인트 그래프 - 산점도(기본값)
+# 조인트 그래프 - 기본값
 j1 = sns.jointplot(x='fare', y='age', data=titanic) 
 
 # 조인트 그래프 - 회귀선

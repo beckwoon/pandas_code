@@ -18,6 +18,6 @@ sns.heatmap(table,                  # 데이터프레임
             annot=True, fmt='d',    # 데이터 값 표시 여부, 정수형 포맷
             cmap='YlGnBu',          # 컬러 맵
             linewidth=.5,           # 구분 선
-            cbar=False)             # 컬러 바 표시 여부
+            cbar=True)             # 컬러 바 표시 여부
 
 plt.show()

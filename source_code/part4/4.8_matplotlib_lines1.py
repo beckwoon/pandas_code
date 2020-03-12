@@ -31,7 +31,7 @@ plt.style.use('ggplot')
 
 # 그래프 객체 생성 (figure에 2개의 서브 플롯을 생성)
 fig = plt.figure(figsize=(10, 10))   
-ax1 = fig.add_subplot(2, 1, 1)
+ax1 = fig.add_subplot(2, 1, 1)  # (행, 열, 서브플롯 순서)
 ax2 = fig.add_subplot(2, 1, 2)
 
 # axe 객체에 plot 함수로 그래프 출력
