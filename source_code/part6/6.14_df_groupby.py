@@ -11,6 +11,8 @@ df = titanic.loc[:, ['age','sex', 'class', 'fare', 'survived']]
 print('승객 수:', len(df))
 print(df.head())
 print('\n')
+print(df.tail())
+print('\n')
 
 # class 열을 기준으로 분할
 grouped = df.groupby(['class']) 

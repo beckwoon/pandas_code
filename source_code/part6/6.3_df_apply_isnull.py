@@ -11,7 +11,8 @@ print('\n')
 
 # 사용자 함수 정의
 def missing_value(series):    # 시리즈를 인수로 전달
-    return series.isnull()    # 불린 시리즈를 반환
+    return series.isnull()    # 불린 시리즈를 반환 
+                              # (시리즈 객체에서 누락데이터를 찾고 그 결과를 불린 시리즈로 반환)
     
 # 데이터프레임의 각 열을 인수로 전달하면 데이터프레임을 반환
 result = df.apply(missing_value, axis=0)  

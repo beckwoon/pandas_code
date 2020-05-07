@@ -12,6 +12,7 @@ pd.set_option('display.max_colwidth', 20)    # 출력할 열의 너비
 titanic = sns.load_dataset('titanic')
 df = titanic.loc[:, ['age','sex', 'class', 'fare', 'survived']]
 print(df.head())
+print(df.tail())
 print('\n')
 
 # 행, 열, 값, 집계에 사용할 열을 1개씩 지정 - 평균 집계

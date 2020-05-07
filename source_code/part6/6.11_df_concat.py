@@ -20,10 +20,10 @@ print(df2, '\n')
 
 # 2개의 데이터프레임을 위 아래 행 방향으로 이어 붙이듯 연결하기 
 result1 = pd.concat([df1, df2])
-print(result1, '\n')
+print(result1, '\n')    #두 프레임의 행인덱스가 기존의 각 인덱스를 적용하여 붙여짐
 
 
-# ignore_index=True 옵션 설정하기 
+# ignore_index=True 옵션 설정하기  (새로운 인덱스를 적용하여 이어 붙이기)
 result2 = pd.concat([df1, df2], ignore_index=True)
 print(result2, '\n')
 
@@ -34,6 +34,7 @@ print(result3, '\n')
 # join='inner' 옵션 적용하기(교집합)
 result3_in = pd.concat([df1, df2], axis=1, join='inner')
 print(result3_in, '\n')
+# 기본값은 joint='outer'이며, 합집합의 형태로 진행
 
 # 시리즈 만들기
 sr1 = pd.Series(['e0', 'e1', 'e2', 'e3'], name='e')

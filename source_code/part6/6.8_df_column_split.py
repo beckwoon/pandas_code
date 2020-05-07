@@ -17,4 +17,5 @@ print(dates.head(), '\n')
 df['연'] = dates.str.get(0)     # dates 변수의 원소 리스트의 0번째 인덱스 값
 df['월'] = dates.str.get(1)     # dates 변수의 원소 리스트의 1번째 인덱스 값 
 df['일'] = dates.str.get(2)     # dates 변수의 원소 리스트의 2번째 인덱스 값
-print(df.head())
+columns = ['연','월','일']
+print(df[columns].head())
