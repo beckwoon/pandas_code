@@ -61,13 +61,13 @@ print(ndf.head())
 print('\n')
 
 # 원핫인코딩 - 범주형 데이터를 모형이 인식할 수 있도록 숫자형으로 변환
-onehot_sex = pd.get_dummies(ndf['sex'])
-ndf = pd.concat([ndf, onehot_sex], axis=1)
+onehot_sex = pd.get_dummies(ndf['sex'])         #'sex'의 더미변수 생성
+ndf = pd.concat([ndf, onehot_sex], axis=1)      #기존 ndf에 더미변수 열을 연결
 
-onehot_embarked = pd.get_dummies(ndf['embarked'], prefix='town')
-ndf = pd.concat([ndf, onehot_embarked], axis=1)
+onehot_embarked = pd.get_dummies(ndf['embarked'], prefix='town') #'embarked'의 더미변수 생성
+ndf = pd.concat([ndf, onehot_embarked], axis=1)     #기존 ndf에 더미변수 열을 연결
 
-ndf.drop(['sex', 'embarked'], axis=1, inplace=True)
+ndf.drop(['sex', 'embarked'], axis=1, inplace=True) #기존 'sex', 'embarked' 열은 삭제
 print(ndf.head())   
 print('\n')
 
@@ -111,6 +111,11 @@ y_hat = knn.predict(X_test)
 
 print(y_hat[0:10])
 print(y_test.values[0:10])
+
+print(len(y_hat))
+print(y_hat.sum())
+print(y_test.sum())
+
 
 # 모형 성능 평가 - Confusion Matrix 계산
 from sklearn import metrics 

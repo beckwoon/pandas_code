@@ -89,6 +89,11 @@ print(y_hat[0:10])
 print(y_test.values[0:10])
 print('\n')
 
+print(len(y_hat))
+print(y_hat.sum())
+print(y_test.sum())
+
+
 # 모형 성능 평가 - Confusion Matrix 계산
 from sklearn import metrics 
 svm_matrix = metrics.confusion_matrix(y_test, y_hat)  

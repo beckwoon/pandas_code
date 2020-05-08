@@ -127,7 +127,7 @@ for key, group in grouped:
 
 # 그래프로 표현 - 시각화
 colors = {-1:'gray', 0:'coral', 1:'blue', 2:'green', 3:'red', 4:'purple', 
-          5:'orange', 6:'brown', 7:'brick', 8:'yellow', 9:'magenta', 10:'cyan'}
+          5:'orange', 6:'brown', 7:'brick', 8:'yellow', 9:'magenta', 10:'cyan', 11:'black'}
 
 cluster_map = folium.Map(location=[37.55,126.98], tiles='Stamen Terrain', 
                         zoom_start=12)
@@ -140,7 +140,7 @@ for name, lat, lng, clus in zip(df.학교명, df.위도, df.경도, df.Cluster):
                         fill_color=colors[clus],    # 원을 채우는 색
                         fill_opacity=0.7,           # 투명도    
                         popup=name
-    ).add_to(cluster_map)
+                        ).add_to(cluster_map)
 
 # 지도를 html 파일로 저장하기
 cluster_map.save('./seoul_mschool_cluster.html')

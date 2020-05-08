@@ -58,6 +58,8 @@ X=df[['clump','cell_size','cell_shape', 'adhesion','epithlial',
       'bare_nuclei','chromatin','normal_nucleoli', 'mitoses']]  #설명 변수 X
 y=df['class']                                                   #예측 변수 Y
 
+print(y.unique()) #악성 종양 여부(2: 양성, 4: 악성)
+
 # 설명 변수 데이터를 정규화
 from sklearn import preprocessing
 X = preprocessing.StandardScaler().fit(X).transform(X)
@@ -69,6 +71,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 print('train data 개수: ', X_train.shape)
 print('test data 개수: ', X_test.shape)
 print('\n')
+
 
 
 '''
@@ -90,6 +93,8 @@ y_hat = tree_model.predict(X_test)      # 2: benign(양성), 4: malignant(악성
 print(y_hat[0:10])
 print(y_test.values[0:10])
 print('\n')
+
+
 
 # 모형 성능 평가 - Confusion Matrix 계산
 from sklearn import metrics 

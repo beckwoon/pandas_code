@@ -59,7 +59,7 @@ ndf = df[['mpg', 'cylinders', 'horsepower', 'weight']]
 print(ndf.head())   
 print('\n')
 
-### 종속 변수 Y인 "연비(mpg)"와 다른 변수 간의 선형관계를 그래프(산점도)로 확인
+### 종속변수(Y)인 "연비(mpg)"와 다른 변수 간의 선형관계를 그래프(산점도)로 확인
 # Matplotlib으로 산점도 그리기
 ndf.plot(kind='scatter', x='weight', y='mpg',  c='coral', s=10, figsize=(10, 5))
 plt.show()
@@ -87,7 +87,7 @@ plt.close()
 
 
 '''
-Step 4: 데이터셋 구분 - 훈련용(train data)/ 검증용(test data)
+[Step 4] 데이터셋 구분 - 훈련용(train data)/ 검증용(test data)
 '''
 
 # 속성(변수) 선택
@@ -96,6 +96,8 @@ y=ndf['mpg']       #종속 변수 Y
 
 # train data 와 test data로 구분(7:3 비율)
 from sklearn.model_selection import train_test_split
+# pip install sklearn
+
 X_train, X_test, y_train, y_test = train_test_split(X,               #독립 변수 
                                                     y,               #종속 변수
                                                     test_size=0.3,   #검증 30%
@@ -106,7 +108,7 @@ print('test data 개수: ', len(X_test))
 
 
 '''
-Step 5: 단순회귀분석 모형 - sklearn 사용
+[Step 5] 단순회귀분석 모형 - sklearn 사용
 '''
 
 # sklearn 라이브러리에서 선형회귀분석 모듈 가져오기

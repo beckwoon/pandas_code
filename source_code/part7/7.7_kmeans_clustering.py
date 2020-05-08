@@ -68,7 +68,7 @@ print(cluster_label)
 print('\n')
 
 # 예측 결과를 데이터프레임에 추가
-df['Cluster'] = cluster_label
+df['Cluster'] = cluster_label    #'Cluster' 열에 추가 (0~4)
 print(df.head())   
 print('\n')
 
